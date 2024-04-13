@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <form id="taxForm">
+            <label for="grossIncome">Enter gross annual income
+                <div class="tooltip">
+                    <svg width="0.6rem" height="0.6rem" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M0 10C0 4.478 4.478 0 10 0c5.523 0 10 4.478 10 10 0 5.523-4.477 10-10 10-5.522 0-10-4.477-10-10zm11.125 2.002H8.989v-.141c.01-1.966.492-2.254 1.374-2.782.093-.056.19-.114.293-.178.73-.459 1.292-1.038 1.292-1.883 0-.948-.743-1.564-1.666-1.564-.851 0-1.657.398-1.712 1.533H6.304C6.364 4.693 8.18 3.5 10.294 3.5c2.306 0 3.894 1.447 3.894 3.488 0 1.382-.695 2.288-1.805 2.952l-.238.144c-.79.475-1.009.607-1.02 1.777V12zm.17 3.012a1.344 1.344 0 01-1.327 1.328 1.32 1.32 0 01-1.328-1.328 1.318 1.318 0 011.328-1.316c.712 0 1.322.592 1.328 1.316z"
+                            fill="#5C5F62" />
+                    </svg>
+                    <span class="tooltiptext">Total salary before any deductions in a year.</span>
+                </div>
+            </label>
+            <div class="input_wrapper">
+                <input type="text" id="grossIncome" placeholder="Enter the gross anual income">
+                <div class="tooltip">
+                    <svg class="error error_grossIncome opacity-0" fill="currentColor" width="1rem" height="1rem" viewBox="0 0 24 24" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"><path d="M12,14a1.25,1.25,0,1,0,1.25,1.25A1.25,1.25,0,0,0,12,14Zm0-1.5a1,1,0,0,0,1-1v-3a1,1,0,0,0-2,0v3A1,1,0,0,0,12,12.5ZM12,2A10,10,0,1,0,22,12,10.01114,10.01114,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.00917,8.00917,0,0,1,12,20Z"/></svg>
+                    <span class="tooltiptext">Enter only numbers</span>
+                </div>
+            </div>
+
+            <label for="extraIncome">Enter extra income
+                <div class="tooltip">
+                    <svg width="0.6rem" height="0.6rem" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M0 10C0 4.478 4.478 0 10 0c5.523 0 10 4.478 10 10 0 5.523-4.477 10-10 10-5.522 0-10-4.477-10-10zm11.125 2.002H8.989v-.141c.01-1.966.492-2.254 1.374-2.782.093-.056.19-.114.293-.178.73-.459 1.292-1.038 1.292-1.883 0-.948-.743-1.564-1.666-1.564-.851 0-1.657.398-1.712 1.533H6.304C6.364 4.693 8.18 3.5 10.294 3.5c2.306 0 3.894 1.447 3.894 3.488 0 1.382-.695 2.288-1.805 2.952l-.238.144c-.79.475-1.009.607-1.02 1.777V12zm.17 3.012a1.344 1.344 0 01-1.327 1.328 1.32 1.32 0 01-1.328-1.328 1.318 1.318 0 011.328-1.316c.712 0 1.322.592 1.328 1.316z"
+                            fill="#5C5F62" />
+                    </svg>
+                    <span class="tooltiptext"> income coming from other sources in a year.</span>
+                </div>
+            </label>
+            <div class="input_wrapper">
+                <input type="text" id="extraIncome" placeholder="Enter extra annual income">
+                <div class="tooltip">
+                    <svg class="error error_extraIncome opacity-0" fill="currentColor" width="1rem" height="1rem" viewBox="0 0 24 24" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"><path d="M12,14a1.25,1.25,0,1,0,1.25,1.25A1.25,1.25,0,0,0,12,14Zm0-1.5a1,1,0,0,0,1-1v-3a1,1,0,0,0-2,0v3A1,1,0,0,0,12,12.5ZM12,2A10,10,0,1,0,22,12,10.01114,10.01114,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.00917,8.00917,0,0,1,12,20Z"/></svg>
+                    <span class="tooltiptext">Enter only numbers</span>
+                </div>
+            </div>
+
+            <label for="ageGroup">Enter age group
+                <div class="tooltip">
+                    <svg width="0.6rem" height="0.6rem" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M0 10C0 4.478 4.478 0 10 0c5.523 0 10 4.478 10 10 0 5.523-4.477 10-10 10-5.522 0-10-4.477-10-10zm11.125 2.002H8.989v-.141c.01-1.966.492-2.254 1.374-2.782.093-.056.19-.114.293-.178.73-.459 1.292-1.038 1.292-1.883 0-.948-.743-1.564-1.666-1.564-.851 0-1.657.398-1.712 1.533H6.304C6.364 4.693 8.18 3.5 10.294 3.5c2.306 0 3.894 1.447 3.894 3.488 0 1.382-.695 2.288-1.805 2.952l-.238.144c-.79.475-1.009.607-1.02 1.777V12zm.17 3.012a1.344 1.344 0 01-1.327 1.328 1.32 1.32 0 01-1.328-1.328 1.318 1.318 0 011.328-1.316c.712 0 1.322.592 1.328 1.316z"
+                            fill="#5C5F62" />
+                    </svg>
+                    <span class="tooltiptext">Choose the range of your age</span>
+                </div>
+            </label>
+            <select id="ageGroup">
+                <option value="">Please choose an option</option>
+                <option value="under40"> 40 < </option>
+                <option value="between40and60"> ≥ 40 & < 60 </option>
+                <option value="over60"> ≥ 60 </option>
+            </select>
+
+            <label for="deductions">Enter total applicable deductions
+                <div class="tooltip">
+                    <svg width="0.6rem" height="0.6rem" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M0 10C0 4.478 4.478 0 10 0c5.523 0 10 4.478 10 10 0 5.523-4.477 10-10 10-5.522 0-10-4.477-10-10zm11.125 2.002H8.989v-.141c.01-1.966.492-2.254 1.374-2.782.093-.056.19-.114.293-.178.73-.459 1.292-1.038 1.292-1.883 0-.948-.743-1.564-1.666-1.564-.851 0-1.657.398-1.712 1.533H6.304C6.364 4.693 8.18 3.5 10.294 3.5c2.306 0 3.894 1.447 3.894 3.488 0 1.382-.695 2.288-1.805 2.952l-.238.144c-.79.475-1.009.607-1.02 1.777V12zm.17 3.012a1.344 1.344 0 01-1.327 1.328 1.32 1.32 0 01-1.328-1.328 1.318 1.318 0 011.328-1.316c.712 0 1.322.592 1.328 1.316z"
+                            fill="#5C5F62" />
+                    </svg>
+                    <span class="tooltiptext">Total amount of deductions in a year.</span>
+                </div>
+            </label>
+            <div class="input_wrapper">
+                <input type="text" id="deductions" placeholder="Please enter numbers only">
+                <div class="tooltip">
+                    <svg class="error error_deductions opacity-0" fill="currentColor" width="1rem" height="1rem" viewBox="0 0 24 24" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"><path d="M12,14a1.25,1.25,0,1,0,1.25,1.25A1.25,1.25,0,0,0,12,14Zm0-1.5a1,1,0,0,0,1-1v-3a1,1,0,0,0-2,0v3A1,1,0,0,0,12,12.5ZM12,2A10,10,0,1,0,22,12,10.01114,10.01114,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.00917,8.00917,0,0,1,12,20Z"/></svg>
+                    <span class="tooltiptext">Enter only numbers</span>
+                </div>
+            </div>
+
+            <button type="button" id="calculateTax">Submit</button>
+        </form>
+        <div id="errorContainer"></div>
+    </div>
+
+    <div id="taxModal" class="modal">
+        <div class="modal-content">
+            <p class="modal_p01">Your overall income will be</p>
+            <p id="resultText"></p>
+            <p class="modal_p02">after tax deductions</p>
+            <span class="close">&times;</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
