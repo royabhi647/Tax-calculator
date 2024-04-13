@@ -34,3 +34,5 @@ To run the application locally:
 ### Testing
    - No automated tests provided.
    - Manual testing required for all functionalities.
+
+### [live preview](https://main--abhi-tax-calculator.netlify.app/)
